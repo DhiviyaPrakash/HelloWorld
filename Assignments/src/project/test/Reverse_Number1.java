@@ -10,25 +10,27 @@ public class Reverse_Number1 {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the number to be reversed:");
 		 number = sc.nextInt();
-		 Reverse_Number1 rev = new Reverse_Number1();
+		 Reverse_Number1 rev = new Reverse_Number1(number);
 
 	}
 	public Reverse_Number1( )
 	{
-		this(number);
+		
 	
-		System.out.println("The reverse of the given number is: "+reverse);
+		System.out.println("Finding reverse");
 		
 	}
 	public Reverse_Number1(int n)
 	{
-		int number = n;
+		this();
+		this.number = n;
 		while(number!=0)
 		{
 			remainder = number%10;
 			reverse = reverse*10+ remainder;
 			number = number/10;
 		}
+		System.out.println("The reverse of the given number is: "+reverse);
 	}
 
 }
